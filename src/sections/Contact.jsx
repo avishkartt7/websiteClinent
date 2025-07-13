@@ -25,7 +25,7 @@ const Contact = () => {
                     Reach Us For Any Query
                 </motion.h1>
                 <div className='w-[120px] h-[6px] bg-yellow-500'></div>
-                <p className='text-3xl italic text-gray-600 mt-[60px]'>We are the leader with 25 years of experience in the construction market!</p>
+                <p className='text-3xl italic text-gray-600 mt-[60px]'>Building Dubai's future with innovative construction solutions and exceptional quality!</p>
 
             </motion.div>
             

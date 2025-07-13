@@ -20,12 +20,12 @@ const Hero = () => {
                 className='text-yellow-500 text-2xl'
             >WE ARE BUILDERS 
             </motion.h1>
-            <motion.h1
+7            <motion.h1
                 variants={slideUpVariants}
                 className='text-white uppercase text-[50px] font-bold'
             >we will build your dream </motion.h1>
             <div className='w-[120px] h-[6px] bg-yellow-500'></div>
-            <p className='text-white text-[20px]'>Whether you’re dreaming of a new structure or enhancing an existing space, Sumon Structures is here to make it happen. With unmatched expertise and dedication, we ensure a smooth building experience from start to finish.</p>
+            <p className='text-white text-[20px]'>Whether you're dreaming of a new structure or enhancing an existing space, Ashom Construction is here to make it happen. With modern expertise and innovative solutions, we ensure a smooth building experience from start to finish.</p>
 
             <motion.div
                 initial="hidden"

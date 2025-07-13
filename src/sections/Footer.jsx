@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope, FaArrowUp } from 'react-icons/fa';
 import { animateScroll as scroll } from 'react-scroll';
+import logo from '../assets/image/ashom.png';
 
 const Footer = () => {
     const scrollToTop = () => {
@@ -11,9 +12,9 @@ const Footer = () => {
         <footer className='bg-gray-900 text-white py-6 relative'>
             <div className='container mx-auto flex flex-col md:flex-row justify-between items-center'>
                 {/* Brand */}
-                <h1 className='text-xl md:text-2xl font-bold'>
-                    MS <span className='text-yellow-500 italic'>Structure</span>
-                </h1>
+                <div className='flex items-center'>
+                    <img src={logo} alt='Ashom Construction Logo' className='h-12 md:h-16 lg:h-18 w-auto' />
+                </div>
                 
                 {/* Links */}
                 <div className='flex gap-6 mt-4 md:mt-0'>
@@ -43,7 +44,7 @@ const Footer = () => {
 
                 {/* Copyright */}
                 <p className='text-sm mt-4 md:mt-0'>
-                    &copy; {new Date().getFullYear()} MS Structure. All rights reserved.
+                    &copy; {new Date().getFullYear()} Ashom Construction. All rights reserved.
                 </p>
             </div>
 

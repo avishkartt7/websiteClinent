@@ -10,10 +10,6 @@ import { MdOutlineDesignServices } from "react-icons/md";
 import { FaRegBuilding } from "react-icons/fa";
 import { FaSitemap } from "react-icons/fa";
 
-import client1 from "../src/assets/client1.png";
-import client2 from "../src/assets/client2.png";
-import client3 from "../src/assets/client3.png";
-
 export const allservices = [
   {
     icon: building,
@@ -80,29 +76,3 @@ export const planning = [
       "Thorough testing, debugging, and deployment to ensure the project meets all specifications and functions seamlessly.",
   },
 ];
-
-
-export const clients = [
-  {
-    image: client1,
-    name: "Alex Parker",
-    about:
-      "An experienced constructor known for meticulous planning and project management, ensuring every construction project meets quality standards and deadlines.",
-    post: "Constructor",
-  },
-  {
-    image: client2,
-    name: "Drew James",
-    about:
-      "A visionary architect who blends modern design with sustainable practices to create innovative, environmentally friendly buildings.",
-    post: "Architect",
-  },
-  {
-    image: client3,
-    name: "Sam Peterson",
-    about:
-      "A skilled builder with a strong focus on craftsmanship and attention to detail, dedicated to bringing architectural designs to life with precision.",
-    post: "Builder",
-  },
-];
-

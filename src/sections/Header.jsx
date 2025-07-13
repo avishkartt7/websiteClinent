@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaXmark, FaBars } from 'react-icons/fa6';
 import { Link } from 'react-scroll';
+import logo from '../assets/image/ashom.png';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,10 +23,10 @@ const Header = () => {
     ];
 
     return (
-        <nav className='w-full flex bg-white justify-between items-center gap-1 lg:px-16 px-6 py-4 top-0 z-50'>
-            <h1 className='text-black md:text-4xl text-3xl font-bold font-rubik'>
-                MS <span className='text-yellow-500 italic'>Structure</span>
-            </h1>
+        <nav className='w-full flex bg-white justify-between items-center gap-1 lg:px-16 px-6 py-0 top-0 z-50'>
+            <div className='flex items-center'>
+                <img src={logo} alt='Ashom Construction Logo' className='h-32 md:h-40 lg:h-48 w-auto object-contain mix-blend-multiply' />
+            </div>
             {/* Desktop Menu */}
             <ul className='lg:flex justify-normal items-center gap-6 hidden'>
                 {navItem.map((item, index) => (

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { FaXmark, FaBars } from 'react-icons/fa6';
 import { Link } from 'react-scroll';
-import logo from '../assets/image/ashom.png';
+import ashomLogo from '../assets/image/ashom.png';
+import ashomSecLogo from '../assets/image/ASHOM-SEC.png';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,25 +16,52 @@ const Header = () => {
     };
 
     const navItem = [
-        { link: 'Home', path: 'home' },
+        { link: 'Home', path: 'hero' },
         { link: 'About', path: 'about' },
         { link: 'Services', path: 'services' },
-        { link: 'Project', path: 'projects' },
+        { link: 'Projects', path: 'projects' },
         { link: 'Contact', path: 'contact' },
     ];
 
     return (
-        <nav className='w-full flex bg-white justify-between items-center gap-1 lg:px-16 px-6 py-0 top-0 z-50'>
-            <div className='flex items-center'>
-                <img src={logo} alt='Ashom Construction Logo' className='h-32 md:h-40 lg:h-48 w-auto object-contain mix-blend-multiply' />
+        <nav className='w-full flex bg-white justify-between items-center lg:px-16 px-6 py-4 top-0 z-50 shadow-md border-b border-gray-200'>
+            {/* Clean Logo Section - NO CARDS */}
+            <div className='flex items-center gap-8'>
+                {/* ASHOM Construction Logo - Direct Display */}
+                <div className='flex flex-col items-center'>
+                    <img 
+                        src={ashomLogo} 
+                        alt='ASHOM Construction' 
+                        className='h-16 md:h-18 lg:h-20 w-auto object-contain' 
+                    />
+                    <span className='text-xs text-gray-700 font-bold uppercase tracking-wider mt-1'>Construction</span>
+                </div>
+                
+                {/* Simple Company Name Divider */}
+                <div className='hidden md:flex flex-col items-center text-center'>
+                    <h2 className='text-black font-bold text-2xl'>ASHOM</h2>
+                    <div className='w-16 h-[2px] bg-yellow-500 my-1'></div>
+                    <span className='text-gray-600 text-sm font-semibold'>COMPANY</span>
+                </div>
+                
+                {/* ASHOM Specialized Logo - Direct Display */}
+                <div className='flex flex-col items-center'>
+                    <img 
+                        src={ashomSecLogo} 
+                        alt='ASHOM Specialized' 
+                        className='h-16 md:h-18 lg:h-20 w-auto object-contain' 
+                    />
+                    <span className='text-xs text-gray-700 font-bold uppercase tracking-wider mt-1'>Piling, Foundation & Shoring</span>
+                </div>
             </div>
-            {/* Desktop Menu */}
-            <ul className='lg:flex justify-normal items-center gap-6 hidden'>
+
+            {/* Desktop Navigation Menu */}
+            <ul className='lg:flex justify-center items-center gap-8 hidden'>
                 {navItem.map((item, index) => (
                     <li key={index}>
                         <Link
                             to={item.path}
-                            className='text-black uppercase font-bold cursor-pointer p-3 rounded-full hover:bg-yellow-500 hover:text-black text-[16px]'
+                            className='text-gray-800 uppercase font-bold cursor-pointer px-4 py-2 rounded-lg hover:bg-yellow-500 hover:text-black text-[15px] transition-all duration-300'
                             spy={true}
                             offset={-100}
                             smooth={true}
@@ -43,10 +71,14 @@ const Header = () => {
                     </li>
                 ))}
             </ul>
-            <button className='bg-yellow-500 hover:bg-black text-black hover:text-white px-10 py-3 rounded-full font-semibold transform hover:scale-105 transition-transform duration-300 cursor-pointer md:flex hidden'>REACH US</button>
+            
+            {/* Call to Action Button */}
+            <button className='bg-yellow-500 hover:bg-black text-black hover:text-white px-8 py-3 rounded-lg font-bold transition-all duration-300 cursor-pointer md:flex hidden shadow-md'>
+                GET QUOTE
+            </button>
 
-            {/* Mobile Menu Toggle Icon */}
-            <div className='flex justify-between items-center lg:hidden mt-3' onClick={toggleMenu}>
+            {/* Mobile Menu Toggle */}
+            <div className='flex justify-center items-center lg:hidden' onClick={toggleMenu}>
                 {isMenuOpen ? (
                     <FaXmark className='text-yellow-500 text-3xl cursor-pointer' />
                 ) : (
@@ -54,14 +86,14 @@ const Header = () => {
                 )}
             </div>
 
-            {/* Mobile Menu */}
-            <div className={`${isMenuOpen ? 'flex' : 'hidden'} w-full h-fit bg-yellow-500 p-4 absolute top-[72px] left-0`} onClick={closeMenu}>
-                <ul className='flex flex-col justify-center items-center gap-2 w-full'>
+            {/* Mobile Menu Dropdown */}
+            <div className={`${isMenuOpen ? 'flex' : 'hidden'} w-full h-fit bg-yellow-500 p-6 absolute top-[90px] left-0 shadow-xl`} onClick={closeMenu}>
+                <ul className='flex flex-col justify-center items-center gap-4 w-full'>
                     {navItem.map((item, index) => (
-                        <li key={index}>
+                        <li key={index} className='w-full'>
                             <Link
                                 to={item.path}
-                                className='text-black uppercase font-semibold cursor-pointer p-2 rounded-lg hover:bg-black hover:text-white w-full text-center'
+                                className='text-black uppercase font-bold cursor-pointer p-3 rounded-lg hover:bg-black hover:text-white w-full text-center block transition-all duration-300'
                                 spy={true}
                                 offset={-100}
                                 smooth={true}
@@ -70,6 +102,11 @@ const Header = () => {
                             </Link>
                         </li>
                     ))}
+                    <li className='mt-4 w-full'>
+                        <button className='bg-black text-white px-6 py-3 rounded-lg font-bold w-full hover:bg-gray-800 transition-all duration-300'>
+                            GET QUOTE
+                        </button>
+                    </li>
                 </ul>
             </div>
         </nav>

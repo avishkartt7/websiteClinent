@@ -10,69 +10,97 @@ import { MdOutlineDesignServices } from "react-icons/md";
 import { FaRegBuilding } from "react-icons/fa";
 import { FaSitemap } from "react-icons/fa";
 
+// Updated services for ASHOM Company - Two Divisions
 export const allservices = [
+  // ASHOM Construction Division Services (First 3)
   {
     icon: building,
-    title: "Building Renovation",
+    title: "Building Construction",
     about:
-      "Expert renovation services to upgrade and modernize existing structures, enhancing functionality and aesthetic appeal.",
-  },
-  {
-    icon: construction,
-    title: "Construction Services",
-    about:
-      "Comprehensive construction solutions, from project planning to execution, ensuring high-quality and timely completion.",
+      "Comprehensive residential and commercial building construction services with modern techniques and quality craftsmanship for lasting results.",
+    category: "construction"
   },
   {
     icon: design,
     title: "Design & Planning",
     about:
-      "Professional design and planning services to create efficient and innovative spaces tailored to client needs.",
-  },
-  {
-    icon: document,
-    title: "Documentation",
-    about:
-      "Detailed documentation for all project stages, providing clear records and ensuring compliance with industry standards.",
+      "Professional architectural design and project planning services to create efficient, innovative, and aesthetically pleasing spaces.",
+    category: "construction"
   },
   {
     icon: paint,
     title: "Interior Design",
     about:
-      "Creative interior design services to craft comfortable and visually stunning spaces that reflect individual style.",
+      "Creative interior design and renovation services to transform spaces with comfort, functionality, and visual appeal.",
+    category: "construction"
+  },
+  
+  // ASHOM Specialized Division Services (Last 3)
+  {
+    icon: construction,
+    title: "Piling Solutions",
+    about:
+      "Advanced piling techniques and deep foundation solutions for complex construction projects requiring specialized structural support.",
+    category: "specialized"
   },
   {
     icon: support,
-    title: "Customer Support",
+    title: "Foundation & Shoring",
     about:
-      "Dedicated customer support to assist with inquiries, provide updates, and ensure a smooth project experience from start to finish.",
+      "Expert foundation engineering and advanced shoring systems for excavation support and structural stability in challenging conditions.",
+    category: "specialized"
+  },
+  {
+    icon: document,
+    title: "Project Management",
+    about:
+      "Comprehensive project documentation, quality control, and management services for both construction and specialized infrastructure projects.",
+    category: "both"
   },
 ];
-
 
 export const planning = [
   {
     icon: IoDocumentTextSharp,
     title: "Planning",
     about:
-      "Detailed research and strategizing to establish project goals, requirements, and timelines for a successful outcome.",
+      "Detailed research and strategizing to establish project goals, requirements, and timelines for successful construction and infrastructure outcomes.",
   },
   {
     icon: MdOutlineDesignServices,
     title: "Design",
     about:
-      "Crafting user-centered designs, wireframes, and mockups to create a visually appealing and functional interface.",
+      "Creating comprehensive designs, blueprints, and technical specifications for both building construction and specialized infrastructure projects.",
   },
   {
     icon: FaRegBuilding,
     title: "Building",
     about:
-      "Developing the core functionalities and implementing features with clean, efficient code to bring the design to life.",
+      "Expert execution of construction and infrastructure projects using modern techniques, quality materials, and skilled craftsmanship.",
   },
   {
     icon: FaSitemap,
-    title: "Finish",
+    title: "Completion",
     about:
-      "Thorough testing, debugging, and deployment to ensure the project meets all specifications and functions seamlessly.",
+      "Thorough testing, quality control, and final delivery ensuring all projects meet specifications and safety standards across both divisions.",
   },
+];
+
+// Service categories for ASHOM Company
+export const constructionServices = [
+  "Residential Building",
+  "Commercial Construction", 
+  "Interior Design",
+  "Renovation & Remodeling",
+  "Architectural Planning",
+  "Project Management"
+];
+
+export const specializedServices = [
+  "Piling Solutions",
+  "Foundation Engineering", 
+  "Shoring Systems",
+  "Deep Excavation Support",
+  "Structural Stability",
+  "Infrastructure Development"
 ];

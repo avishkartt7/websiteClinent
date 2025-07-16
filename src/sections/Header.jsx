@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaXmark, FaBars } from 'react-icons/fa6';
+import { FaXmark, FaBars, FaWhatsapp } from 'react-icons/fa6';
 import { Link } from 'react-scroll';
 import ashomLogo from '../assets/image/ashom.png';
 import ashomSecLogo from '../assets/image/ASHOM-SEC.png';
@@ -13,6 +13,14 @@ const Header = () => {
 
     const closeMenu = () => {
         setIsMenuOpen(false);
+    };
+
+    // WhatsApp click handler
+    const handleWhatsAppClick = () => {
+        const phoneNumber = "971526766963"; // Phone number from footer
+        const message = "Hello! I'm interested in ASHOM Company services. Please provide more information.";
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappURL, '_blank');
     };
 
     const navItem = [
@@ -72,9 +80,13 @@ const Header = () => {
                 ))}
             </ul>
             
-            {/* Call to Action Button */}
-            <button className='bg-yellow-500 hover:bg-black text-black hover:text-white px-8 py-3 rounded-lg font-bold transition-all duration-300 cursor-pointer md:flex hidden shadow-md'>
-                GET QUOTE
+            {/* WhatsApp Button - Replaces GET QUOTE */}
+            <button 
+                onClick={handleWhatsAppClick}
+                className='bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-bold transition-all duration-300 cursor-pointer md:flex hidden shadow-md items-center gap-2 group'
+            >
+                <FaWhatsapp className='text-xl group-hover:scale-110 transition-transform duration-300' />
+                <span>WhatsApp</span>
             </button>
 
             {/* Mobile Menu Toggle */}
@@ -103,8 +115,12 @@ const Header = () => {
                         </li>
                     ))}
                     <li className='mt-4 w-full'>
-                        <button className='bg-black text-white px-6 py-3 rounded-lg font-bold w-full hover:bg-gray-800 transition-all duration-300'>
-                            GET QUOTE
+                        <button 
+                            onClick={handleWhatsAppClick}
+                            className='bg-green-500 text-white px-6 py-3 rounded-lg font-bold w-full hover:bg-green-600 transition-all duration-300 flex items-center justify-center gap-2'
+                        >
+                            <FaWhatsapp className='text-xl' />
+                            WhatsApp
                         </button>
                     </li>
                 </ul>

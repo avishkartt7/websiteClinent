@@ -3,8 +3,17 @@ import ashomLogo from '../assets/image/ashom.png'
 import ashomSecLogo from '../assets/image/ASHOM-SEC.png'
 import {motion} from 'framer-motion'
 import { slideUpVariants , zoomInVariants } from './animation';
+import { FaWhatsapp } from 'react-icons/fa6';
 
 const Hero = () => { 
+    // WhatsApp click handler
+    const handleWhatsAppClick = () => {
+        const phoneNumber = "971526766963";
+        const message = "Hello! I'm interested in ASHOM Company services. Please provide more information.";
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappURL, '_blank');
+    };
+
     return (
         <div id='hero' className='w-full lg:h-[700px] h-fit m-auto pt-[60px] lg:pt-[80px] lg:px-[150px] px-[20px] flex justify-between items-center lg:flex-row flex-col lg:gap-10 gap-[50px] bg-white'>
            
@@ -52,28 +61,31 @@ const Hero = () => {
                 </motion.button>
                 <motion.button
                 variants={zoomInVariants}
-                className='border-2 border-black hover:bg-black text-black hover:text-white px-10 py-3 rounded-lg font-bold transition-all duration-300'>
+                onClick={handleWhatsAppClick}
+                className='bg-green-500 hover:bg-green-600 text-white px-10 py-3 rounded-lg font-bold transition-all duration-300 flex items-center gap-2 shadow-md group'
+                >
+                    <FaWhatsapp className='text-xl group-hover:scale-110 transition-transform duration-300' />
                     GET CONSULTATION
                 </motion.button>
             </motion.div>
            </motion.div>
            
-           {/* ULTRA MINIMAL Logo Section */}
+           {/* SIMPLE Logo Section - Just BIGGER Images */}
            <motion.div 
            initial='hidden'
            whileInView='visible'
            variants={zoomInVariants}
-           className='lg:w-[50%] w-full flex flex-col justify-center items-center gap-16'
+           className='lg:w-[50%] w-full flex flex-col justify-center items-center gap-2'
            >
-            {/* First Logo - Simple & Clean */}
+            {/* First Logo - Simple & BIGGER */}
             <motion.div 
             variants={slideUpVariants}
-            className='flex flex-col items-center gap-6 text-center'
+            className='flex flex-col items-center gap-1 text-center'
             >
                 <img
                     src={ashomLogo}
                     alt='ASHOM Construction'
-                    className='h-[120px] w-auto object-contain'
+                    className='h-[180px] lg:h-[220px] w-auto object-contain'
                 />
                 <div>
                     <h3 className='text-black text-2xl font-bold mb-1'>ASHOM CONSTRUCTION</h3>
@@ -81,22 +93,22 @@ const Hero = () => {
                 </div>
             </motion.div>
 
-            {/* Minimal Divider */}
+            {/* Simple Divider */}
             <motion.div 
             variants={zoomInVariants}
-            className='w-24 h-[2px] bg-yellow-500'
+            className='w-12 h-[2px] bg-yellow-500'
             >
             </motion.div>
 
-            {/* Second Logo - Simple & Clean */}
+            {/* Second Logo - Simple & BIGGER */}
             <motion.div 
             variants={slideUpVariants}
-            className='flex flex-col items-center gap-6 text-center'
+            className='flex flex-col items-center gap-1 text-center'
             >
                 <img
                     src={ashomSecLogo}
                     alt='ASHOM'
-                    className='h-[120px] w-auto object-contain'
+                    className='h-[180px] lg:h-[220px] w-auto object-contain'
                 />
                 <div>
                     <h3 className='text-black text-2xl font-bold mb-1'>ASHOM</h3>

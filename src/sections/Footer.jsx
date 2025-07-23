@@ -77,7 +77,7 @@ const Footer = () => {
                             <div className='flex items-center gap-4'>
                                 <FaGlobe className='text-yellow-500 text-lg' />
                                 <div>
-                                    <p className='text-white font-semibold'>www.ashom.com</p>
+                                    <p className='text-white font-semibold'>ashom-group.com</p>
                                     <p className='text-gray-400 text-sm'>Visit Our Website</p>
                                 </div>
                             </div>

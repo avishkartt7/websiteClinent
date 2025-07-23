@@ -90,7 +90,7 @@ Please contact me for further discussion.`;
                             Call Now
                         </a>
                         <a 
-                            href="mailto:info@ashom.com"
+                            href="mailto:info@ashom-group.com"
                             className='bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-bold transition-all duration-300 flex items-center gap-2 shadow-lg'
                         >
                             <FaEnvelope className='text-lg' />

@@ -70,7 +70,7 @@ const Footer = () => {
                             <div className='flex items-start gap-4'>
                                 <FaEnvelope className='text-yellow-500 mt-1 text-lg' />
                                 <div>
-                                    <p className='text-white font-semibold'>info@ashom.com</p>
+                                    <p className='text-white font-semibold'>info@ashom-group.com</p>
                                     <p className='text-gray-400 text-sm'>General Inquiries</p>
                                 </div>
                             </div>
